@@ -1,7 +1,7 @@
 set -u
 set -e
 
-HOME_DIR=$HOME
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 cat <<'EOF'
 description "redis"
@@ -16,6 +16,6 @@ script
   done
 EOF
 cat <<EOF
-  exec bash $HOME_DIR/redis/run.sh
+  exec bash $DIR/run.sh
 end script
 EOF
