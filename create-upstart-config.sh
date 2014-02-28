@@ -16,6 +16,6 @@ script
   done
 EOF
 cat <<EOF
-  exec bash $DIR/run.sh
+  HOME=$HOME exec bash $DIR/run.sh
 end script
 EOF
