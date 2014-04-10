@@ -7,4 +7,4 @@ mkdir -p $REDIS_LOGS
 
 sudo sysctl vm.overcommit_memory=1
 
-exec docker run -rm -p 6379:6379 -v $REDIS_DATA:/data -v $REDIS_LOGS:/logs stocard/redis
+exec docker run --rm -p 6379:6379 -v $REDIS_DATA:/data -v $REDIS_LOGS:/logs stocard/redis
